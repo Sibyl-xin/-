@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<style type="text/css">
+			/*选择汽车品牌弹框*/			
+		.selecttit{background-color: #FF8400;width: 94%;margin-left: 3%;height: 40px;color: #fff;font-size: 16px;}
+		.selecttit>a{color: #fff;}	
+		.notselect{background-color: #9D9D9D;width: 94%;margin-left: 3%;height: 40px;color: #fff;font-size: 16px;
+			border-radius: 3px;text-align: center;line-height: 40px;}	
+		.letter>ul{border: 1px dashed #FF8400;text-align: center;}
+		.letter>ul>li{padding: 0;}
+		.letter>ul>li>a{color: #000000;padding: 3px;}		
+		.letter>ul>li>a:hover{text-decoration: none;color: #fff;background-color: #FF8400;}	
+		.carpadding{padding-top: 2px;padding-bottom: 2px;}	
+		.carmessage{display:block;color:#000000;border:1px solid #dedede;padding:5px;text-align: center;width: 100%;}
+		.carmessage:hover{border: 1px solid #FF8400;text-decoration: none;color: #000000;}
+		.carmessage>span{border-left: 1px solid #999;padding-left: 10px;margin-left: 10px;height: 40px;}
+		.cartype{display: block;font-size:16px;padding-top:10px;padding-bottom:10px;text-align: center;color:#000000;border:1px solid #dedede;}
+		.cartype:hover{border: 1px solid #FF8400;text-decoration: none;color: #000000;}
+
+		</style>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+            	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding: 5px;">
+            		<a href="#carbrand" data-toggle="tab" class="btn btn-warning selecttit">
+            			选择汽车品牌
+            		</a>	
+            	</div>
+            	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding: 5px;">
+            		<div class="notselect">
+           				选择汽车型号
+            		</div>
+            	</div>
+          	</div>
+          	<div class="row">
+          		<div class="col-md-12">
+          			<div class="container-fluid" style="border: 1px dotted #ccc;padding-bottom: 10px;padding-top: 10px;">
+	            		<div class="tab-content">
+	            			<!--选择车品牌-->
+	            			<div class=" tab-pane fade in active" id="carbrand">
+		            			<div class="row">
+				            		<div class="col-md-12">
+				            			<h5>按字母快捷键选择</h5>
+				            		</div>
+				            	</div>	
+				            	<div class="row">
+				            		<div class="col-md-12 letter">
+				            			<ul class="list-unstyled list-inline">
+					            			<li class="active"><a href="#hot" data-toggle="tab">热门</a></li> 
+					            			<li><a href="#A" data-toggle="tab">A</a></li> 
+					            			<li><a href="#">B</a></li>   
+					            			<li><a href="#">C</a></li> 
+					            			<li><a href="#">D</a></li>   
+					            			<li><a href="#">E</a></li>
+				            				<li><a href="#">F</a></li>   
+				            				<li><a href="#">G</a></li>
+				            				<li><a href="#">H</a></li>   
+				            				<li><a href="#">I</a></li>
+				            				<li><a href="#">J</a></li>   
+				            				<li><a href="#">K</a></li>
+				            				<li><a href="#">L</a></li>   
+				            				<li><a href="#">M</a></li> 
+				            				<li><a href="#">N</a></li>
+				            				<li><a href="#">O</a></li>   
+				            				<li><a href="#">P</a></li> 
+				            				<li><a href="#">Q</a></li> 
+				            				<li><a href="#">R</a></li> 
+				            				<li><a href="#">S</a></li>
+				            				<li><a href="#">T</a></li>   
+				            				<li><a href="#">U</a></li> 
+				            				<li><a href="#">V</a></li> 
+				            				<li><a href="#">W</a></li> 
+				            				<li><a href="#">X</a></li>
+				            				<li><a href="#">Y</a></li>   
+				            				<li><a href="#">Z</a></li>
+				            			</ul>
+			            			</div>
+			            		</div>
+			            		<div class="container-fluid">
+			            			<div class="tab-content">
+			            				<div class="tab-pane fade in active" id="hot">
+			            					<div class="row">
+						            			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 carpadding" >
+						            				<a href="#BMW" data-toggle="tab" class="carmessage">
+						            					<img src="caricons/BMW.jpg" height="40" width="40" alt="" />
+						            					<span>宝马</span>
+						            				</a>
+						            			</div>
+						            			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 carpadding">
+						            				<a href="#" data-toggle="tab" class="carmessage">
+						            					<img src="caricons/BC.jpg" height="40" width="40" alt="" />
+						            					<span>奔驰</span>
+						           						</a>
+						            				</div>
+						            			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 carpadding">
+						            				<a href="#" data-toggle="tab" class="carmessage">
+						            					<img src="caricons/Audi.jpg" height="40" width="40" alt="" />
+						            					<span>奥迪</span>
+						            				</a>
+						            			</div>
+						            		</div>
+			            				</div>
+			            				<div class="tab-pane fade" id="A"> 
+			            					<div class="row">					            					
+						            			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 carpadding">
+						            				<a href="#" data-toggle="tab" class="carmessage">
+						            					<img src="caricons/Audi.jpg" height="40" width="40" alt="" />
+						            					<span>奥迪</span>
+						            				</a>
+						            			</div>
+						            		</div>
+			            				</div>
+			            			</div>
+			            		</div>
+	            			</div>
+	            					
+	            			<!--选择车型-->
+	            			<!--选择宝马车型-->
+		            		<div class="tab-pane fade" id="BMW">
+		            			<div class="row">
+						          	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 carpadding" >
+						            	<a class="cartype">
+						            		318i
+						            	</a>
+						            </div>
+						            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 carpadding">
+						            	<a class="cartype">
+						            		320i
+						           		</a>
+						            </div>
+						            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 carpadding">
+						            	<a class="cartype">
+						            		328i
+						            	</a>
+						            </div>
+						    	</div>
+		            		</div>
+	            		</div>
+            		</div>	
+          		</div>
+          	</div>
+		</div>	
+		
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<title>积分系数</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/cheido.css" />
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="tablebox">
+					<div class="tabletit">
+						系数管理表
+						<span class="glyphicon glyphicon-hand-right hand"></span>		
+						<button type="button" class="btn btn-primary btn-xs">
+							<span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+					<div class="container-fluid" style="margin-bottom: 10px;margin-top: 10px;">
+						<div class="row">
+							<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+								<input type="text" class="form-control" placeholder="维修单号"/>
+							</div>
+							<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+								<input type="text" class="form-control" placeholder="项目名称"/>
+								
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+								<button class="btn btn-info" type="button">
+									<span class="glyphicon glyphicon-search"></span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid" style="margin-bottom: 10px;">
+						<div class="row">
+							<div class="col-md-12">
+								<button type="button" class="btn btn-default btn-sm">审批</button>
+								<button type="button" class="btn btn-primary btn-sm">审批</button>
+								<button type="button" class="btn btn-danger btn-sm">审批</button>
+								<button type="button" class="btn btn-info btn-sm">审批</button>
+								<button type="button" class="btn btn-warning btn-sm">审批</button>
+								<button type="button" class="btn btn-success btn-sm pull-right">审批</button>
+							</div>
+						</div>
+					</div>
+					
+					<table style="width: 98%;margin-left: 1%;" class="table table-bordered">
+						<thead>
+							<tr>
+								<th class="tcheckbox">
+									<input type="checkbox" id="checkboxInput1"/>
+									<label for="checkboxInput1"></label>							
+								</th>
+								<th>序号</th>
+								<th>系数</th>
+								<th>备注</th>
+								<th class="hidden-xs">
+									收益级别
+									<span class="glyphicon glyphicon-resize-small pull-right"></span>
+								</th>
+								<th>状态</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+					<tbody>
+						<tr>
+							<td class="tcheckbox">
+								<input type="checkbox" id="checkboxInput2"/>
+								<label for="checkboxInput2"></label>
+							</td>
+							<td>1</td>
+							<td>0.5</td>
+							<td>推荐人1</td>
+							<td class="hidden-xs">1</td>
+							<td><span class="label label-info">待办</span></td>
+							<td>
+								<div class="btn-group hidden-lg hidden-md hidden-sm" >
+									<button type="button" class="btn btn-primary btn-xs" data-toggle="dropdown">
+									  	<span class="glyphicon glyphicon-cog"></span>
+									</button>
+									<ul class="dropdown-menu mymenu" role="menu" >
+									    <li>
+									      	<button type="button" class="btn btn-warning btn-xs">
+												<span class="glyphicon glyphicon-pencil"></span>
+											</button>
+									    </li>
+									    <li>
+									      	<button type="button" class="btn btn-info btn-xs">
+												<span class="glyphicon glyphicon-search"></span>
+											</button>
+									   	</li>
+									    <li>
+									      	<button type="button" class="btn btn-danger btn-xs">
+												<span class="glyphicon glyphicon-trash"></span>
+											</button>
+									    </li>
+									</ul>
+								</div>
+								
+								<button type="button" class="btn btn-warning btn-xs hidden-xs">
+									<span class="glyphicon glyphicon-pencil"></span>
+								</button>
+								<button type="button" class="btn btn-info btn-xs hidden-xs">
+									<span class="glyphicon glyphicon-search"></span>
+								</button>
+								<button type="button" class="btn btn-danger btn-xs hidden-xs">
+									<span class="glyphicon glyphicon-trash"></span>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td class="tcheckbox">
+								<input type="checkbox" id="checkboxInput3"/>
+								<label for="checkboxInput3"></label>
+							</td>
+							<td>2</td>
+							<td>0.5</td>
+							<td>推荐人2</td>
+							<td class="hidden-xs">2</td>
+							<td><span class="label label-danger">已完</span></td>
+							<td>
+								<div class="btn-group hidden-lg hidden-md hidden-sm" >
+									<button type="button" class="btn btn-primary btn-xs" data-toggle="dropdown">
+									  	<span class="glyphicon glyphicon-cog"></span>
+									</button>
+									<ul class="dropdown-menu mymenu" role="menu" >
+									    <li>
+									      	<button type="button" class="btn btn-warning btn-xs">
+												<span class="glyphicon glyphicon-pencil"></span>
+											</button>
+									    </li>
+									    <li>
+									      	<button type="button" class="btn btn-info btn-xs">
+												<span class="glyphicon glyphicon-search"></span>
+											</button>
+									   	</li>
+									    <li>
+									      	<button type="button" class="btn btn-danger btn-xs">
+												<span class="glyphicon glyphicon-trash"></span>
+											</button>
+									    </li>
+									</ul>
+								</div>
+								
+								<button type="button" class="btn btn-warning btn-xs hidden-xs">
+									<span class="glyphicon glyphicon-pencil"></span>
+								</button>
+								<button type="button" class="btn btn-info btn-xs hidden-xs">
+									<span class="glyphicon glyphicon-search"></span>
+								</button>
+								<button type="button" class="btn btn-danger btn-xs hidden-xs">
+									<span class="glyphicon glyphicon-trash"></span>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td class="tcheckbox">
+								<input type="checkbox" id="checkboxInput4"/>
+								<label for="checkboxInput4"></label>
+							</td>
+							<td>3</td>
+							<td>0.5</td>
+							<td>推荐人3</td>
+							<td class="hidden-xs">3</td>
+							<td><span class="label label-primary">好评</span></td>
+							<td>
+								<div class="btn-group hidden-lg hidden-md hidden-sm" >
+									<button type="button" class="btn btn-primary btn-xs" data-toggle="dropdown">
+									  	<span class="glyphicon glyphicon-cog"></span>
+									</button>
+									<ul class="dropdown-menu mymenu" role="menu" >
+									    <li>
+									      	<button type="button" class="btn btn-warning btn-xs">
+												<span class="glyphicon glyphicon-pencil"></span>
+											</button>
+									    </li>
+									    <li>
+									      	<button type="button" class="btn btn-info btn-xs">
+												<span class="glyphicon glyphicon-search"></span>
+											</button>
+									   	</li>
+									    <li>
+									      	<button type="button" class="btn btn-danger btn-xs">
+												<span class="glyphicon glyphicon-trash"></span>
+											</button>
+									    </li>
+									</ul>
+								</div>
+								
+								<button type="button" class="btn btn-warning btn-xs hidden-xs">
+									<span class="glyphicon glyphicon-pencil"></span>
+								</button>
+								<button type="button" class="btn btn-info btn-xs hidden-xs">
+									<span class="glyphicon glyphicon-search"></span>
+								</button>
+								<button type="button" class="btn btn-danger btn-xs hidden-xs">
+									<span class="glyphicon glyphicon-trash"></span>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td class="tcheckbox">
+								<input type="checkbox" id="checkboxInput5"/>
+								<label for="checkboxInput5"></label>
+							</td>
+							<td>4</td>
+							<td>0.5</td>
+							<td>推荐人3</td>
+							<td class="hidden-xs">3</td>
+							<td><span class="label label-warning">警告</span></td>
+							<td>
+								<div class="btn-group hidden-lg hidden-md hidden-sm" >
+									<button type="button" class="btn btn-primary btn-xs" data-toggle="dropdown">
+									  	<span class="glyphicon glyphicon-cog"></span>
+									</button>
+									<ul class="dropdown-menu mymenu" role="menu" >
+									    <li>
+									      	<button type="button" class="btn btn-warning btn-xs">
+												<span class="glyphicon glyphicon-pencil"></span>
+											</button>
+									    </li>
+									    <li>
+									      	<button type="button" class="btn btn-info btn-xs">
+												<span class="glyphicon glyphicon-search"></span>
+											</button>
+									   	</li>
+									    <li>
+									      	<button type="button" class="btn btn-danger btn-xs">
+												<span class="glyphicon glyphicon-trash"></span>
+											</button>
+									    </li>
+									</ul>
+								</div>
+								
+								<button type="button" class="btn btn-warning btn-xs hidden-xs">
+									<span class="glyphicon glyphicon-pencil"></span>
+								</button>
+								<button type="button" class="btn btn-info btn-xs hidden-xs">
+									<span class="glyphicon glyphicon-search"></span>
+								</button>
+								<button type="button" class="btn btn-danger btn-xs hidden-xs">
+									<span class="glyphicon glyphicon-trash"></span>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td class="tcheckbox">
+								<input type="checkbox" id="checkboxInput6"/>
+								<label for="checkboxInput6"></label>
+							</td>
+							<td>5</td>
+							<td>0.5</td>
+							<td>推荐人3</td>
+							<td class="hidden-xs">3</td>
+							<td><span class="label label-success">成功</span></td>
+							<td>
+								<div class="btn-group hidden-lg hidden-md hidden-sm" >
+									<button type="button" class="btn btn-primary btn-xs" data-toggle="dropdown">
+									  	<span class="glyphicon glyphicon-cog"></span>
+									</button>
+									<ul class="dropdown-menu mymenu" role="menu" >
+									    <li>
+									      	<button type="button" class="btn btn-warning btn-xs">
+												<span class="glyphicon glyphicon-pencil"></span>
+											</button>
+									    </li>
+									    <li>
+									      	<button type="button" class="btn btn-info btn-xs">
+												<span class="glyphicon glyphicon-search"></span>
+											</button>
+									   	</li>
+									    <li>
+									      	<button type="button" class="btn btn-danger btn-xs">
+												<span class="glyphicon glyphicon-trash"></span>
+											</button>
+									    </li>
+									</ul>
+								</div>
+								
+								<button type="button" class="btn btn-warning btn-xs hidden-xs">
+									<span class="glyphicon glyphicon-pencil"></span>
+								</button>
+								<button type="button" class="btn btn-info btn-xs hidden-xs">
+									<span class="glyphicon glyphicon-search"></span>
+								</button>
+								<button type="button" class="btn btn-danger btn-xs hidden-xs">
+									<span class="glyphicon glyphicon-trash"></span>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="7" style="padding-bottom: 12px;padding-top: 12px;">
+								<div class="row">
+									<div class="col-lg-1 col-md-1 hidden-sm hidden-xs">
+										<select class="form-control" style="height: 23px;width: 50px; padding: 0;font-size: 12px;">
+											<option value="">10</option>
+											<option value="">20</option>
+										</select>
+									</div>
+									<div class="col-lg-1 col-md-1 col-sm-2 col-xs-1">
+										<button type="button" class="btn btn-default btn-xs hidden-xs">
+											<span class="glyphicon glyphicon-fast-backward"></span>
+										</button>
+										<button type="button" class="btn btn-default btn-xs">
+											<span class="glyphicon glyphicon-step-backward"></span>
+										</button>
+									</div>
+									<div class="col-lg-1 col-md-1 col-sm-2 hidden-xs center-block" style="font-size: 16px;line-height: 25px;">
+										<input type="text" class="form-control text-center" style="width: 35px;padding:0;height: 23px; float: left;margin-right: 3px;font-size: 16px;"/>
+										/<span style="margin-left: 2px;">2</span>
+									</div>
+									<div class="col-lg-1 col-md-1 col-sm-2 col-xs-1">
+										<button type="button" class="btn btn-default btn-xs">
+											<span class="glyphicon glyphicon-step-forward"></span>
+										</button>
+										<button type="button" class="btn btn-default btn-xs hidden-xs">
+											<span class="glyphicon glyphicon-fast-forward"></span>
+										</button>
+									</div>
+									
+									<div class="col-lg-1 col-md-1 hidden-sm hidden-xs">
+										<button type="button" class="btn btn-default btn-xs">
+											<span class="glyphicon glyphicon-refresh"></span>
+										</button>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>		
+			
+				</div>
+				
+			</div>
+		</div>
+
+		</div>
+		
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

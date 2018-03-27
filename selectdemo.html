@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<title>预约登记</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/cheido.css" />
+		<style type="text/css">
+			span{font-size: 16px;line-height: 30px;}
+		</style>
+	</head>
+	<body>
+		<div class="container-fluid" style="min-height: 520px;">	
+			<div class="row" style="border-bottom: 1px dotted #deDEDE;padding-bottom:8px;margin-bottom: 15px;">
+				<div class="col-lg-9 col-md-9 col-sm-7 col-xs-12">
+					<span style="font-size: 22px;color: #286090;">
+						<span class="glyphicon glyphicon-leaf" style="padding: 5px;"></span>
+						预检单
+					</span>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12" style="line-height: 30px;text-align: right;">
+					<span class="label label-success hidden">微信已注册</span>
+					<span class="label label-danger">微信未注册</span>
+					<span class="label label-success">首单免人工</span>
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-2 col-xs-12" style="line-height: 35px;text-align: right;">
+					2015/11/4
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="row">
+						<div class="col-md-12">
+							<span>车牌</span>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="text" class="form-control" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="row">
+						<div class="col-md-12">
+							<span>姓名</span>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="text" class="form-control" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="row">
+						<div class="col-md-12">
+							<span>品牌</span>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group has-feedback">
+								<span class="glyphicon glyphicon-search form-control-feedback"></span>
+								<input type="text" class="form-control" data-toggle="modal" data-target="#myModal" />
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="row">
+						<div class="col-md-12">
+							<span>系列</span>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group has-feedback">
+								<span class="glyphicon glyphicon-search form-control-feedback"></span>
+								<input type="text" class="form-control" data-toggle="modal" data-target="#myModal"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+			<!--选择车型弹框-->
+			
+			<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   				<div class="modal-dialog">
+      				<div class="modal-content">
+         				<div class="modal-header">
+            				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  				&times;
+            				</button>
+            				<h4 class="modal-title" id="myModalLabel">
+               				选择车型
+           		 			</h4>
+         				</div>
+         				<div class="modal-body">
+            				<div class="row">
+            					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding: 5px;">
+            						<button type="button" class="btn btn-warning selecttit">选择汽车品牌</button>
+            					</div>
+            					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding: 5px;">
+            						<button type="button" class="btn btn-default selecttit notselect">选择汽车型号</button>
+            					</div>
+            				</div>	
+            				<div class="row">
+            					<div class="col-md-12">
+            						<h5>按字母快捷键选择</h5>
+            					</div>
+            				</div>	
+            				<div class="row">
+            					<div class="col-md-12 letter">
+            						<ul class="list-unstyled list-inline">
+	            						<li class="active"><a href="#hot" data-toggle="tab">热门</a></li> 
+	            						<li><a href="#">A</a></li> 
+	            						<li><a href="#">B</a></li>   
+	            						<li><a href="#">C</a></li> 
+	            						<li><a href="#">D</a></li>   
+	            						<li><a href="#">E</a></li>
+	            						<li><a href="#">F</a></li>   
+	            						<li><a href="#">G</a></li>
+	            						<li><a href="#">H</a></li>   
+	            						<li><a href="#">I</a></li>
+	            						<li><a href="#">J</a></li>   
+	            						<li><a href="#">K</a></li>
+	            						<li><a href="#">L</a></li>   
+	            						<li><a href="#">M</a></li> 
+	            						<li><a href="#">N</a></li>
+	            						<li><a href="#">O</a></li>   
+	            						<li><a href="#">P</a></li> 
+	            						<li><a href="#">Q</a></li> 
+	            						<li><a href="#">R</a></li> 
+	            						<li><a href="#">S</a></li>
+	            						<li><a href="#">T</a></li>   
+	            						<li><a href="#">U</a></li> 
+	            						<li><a href="#">V</a></li> 
+	            						<li><a href="#">W</a></li> 
+	            						<li><a href="#">X</a></li>
+	            						<li><a href="#">Y</a></li>   
+	            						<li><a href="#">Z</a></li>
+	            					</ul>
+            					</div>
+            				</div>
+            				<div class="row">
+            					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 carpadding" >
+            						<div class="carmessage">
+            							<img src="caricons/BMW.jpg" height="40" width="40" alt="" />
+            							<span>宝马</span>
+            						</div>
+            					</div>
+            					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 carpadding">
+            						<div class="carmessage">
+            							<img src="caricons/BC.jpg" height="40" width="40" alt="" />
+            							<span>奔驰</span>
+            						</div>
+            					</div>
+            					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 carpadding">
+            						<div class="carmessage">
+            							<img src="caricons/Audi.jpg" height="40" width="40" alt="" />
+            							<span>奥迪</span>
+            						</div>
+            					</div>
+            					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 carpadding">
+            						<div class="carmessage">
+            							<img src="caricons/DZ.jpg" height="40" width="40" alt="" />
+            							<span>大众</span>
+            						</div>
+            					</div>
+            				</div>
+
+         				</div>
+         				<div class="modal-footer">
+				            <button type="button" class="btn btn-default" data-dismiss="modal">
+				            	关闭
+				            </button>
+            				<button type="button" class="btn btn-primary">
+               					确定
+            				</button>
+				        </div>
+				    </div>
+				</div>
+			</div>-->
+			
+			
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="center-block cardiv">
+					<div class="title">
+						<span style="font-size: 20px;">选择车型</span>
+						<button type="button" class="close" style="margin-right: 20px;font-size: 26px;" data-dismiss="modal" aria-hidden="true">
+		                  &times;
+		           		</button>
+					</div>
+					<div class="tit">
+						按品牌车型查找
+					</div>
+					<div class="cartit1">
+						<div class="cartit2">
+							<div class="CarP active">
+								<a href="#carp" data-toggle="tab">选择汽车品牌</a>
+							</div>
+							<span class="glyphicon glyphicon-hand-right" style="color: #FF8400;line-height: 40px;"></span>
+							<div class="CarN">
+								选择汽车型号
+							</div>
+						</div>
+						
+						<div class="tab-content">
+							<div class="tab-pane fade in active" id="carp">
+								<div class="carlist">
+									<div style="margin-top: 5px;">按字母快捷选择</div>
+									<div class="Aul" >
+										<ul id="myTab">
+											<li style="width: 50px;" class="active">
+												<a href="#hot" data-toggle="tab">热门</a>
+											</li>
+											<li><a href="#A" data-toggle="tab">A</a></li> 
+											<!--<li><a href="#B" data-toggle="tab">B</a></li>
+											<li><a href="#C" data-toggle="tab">C</a></li>
+											<li><a href="#D" data-toggle="tab">D</a></li> 
+											<li><a href="#F" data-toggle="tab">F</a></li> 
+											<li><a href="#G" data-toggle="tab">G</a></li>
+											<li><a href="#H" data-toggle="tab">H</a></li>
+											<li><a href="#J" data-toggle="tab">J</a></li>
+											<li><a href="#K" data-toggle="tab">K</a></li>
+											<li><a href="#L" data-toggle="tab">L</a></li>
+											<li><a href="#M" data-toggle="tab">M</a></li>
+											<li><a href="#N" data-toggle="tab">N</a></li>
+											<li><a href="#O" data-toggle="tab">O</a></li> 
+											<li><a href="#P" data-toggle="tab">P</a></li> 
+											<li><a href="#Q" data-toggle="tab">Q</a></li> 
+											<li><a href="#R" data-toggle="tab">R</a></li>
+											<li><a href="#S" data-toggle="tab">S</a></li>
+											<li><a href="#T" data-toggle="tab">T</a></li> 
+											<li><a href="#W" data-toggle="tab">W</a></li> 
+											<li><a href="#X" data-toggle="tab">X</a></li> 
+											<li><a href="#Y" data-toggle="tab">Y</a></li> 
+											<li style="border-right: none;">
+												<a href="#Z" data-toggle="tab">Z</a>
+											</li>-->
+										</ul>
+										
+									
+										<div id="myTabContent" class="tab-content">
+											<div class="tab-pane fade in active" id="hot">
+												<ul class="list-inline list-unstyled">
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/BC.jpg" height="30" width="30" />
+															</div>
+															<div class="carname">
+																<a href="#BC" data-toggle="tab" >奔驰</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/DZ.jpg" height="30" width="30" />
+															</div>
+															<div class="carname">
+																<a href="#DZ" data-toggle="tab" >大众</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/BMW.jpg" height="30" width="30" />
+															</div>
+															<div class="carname">
+																<a href="#BMW" data-toggle="tab" >宝马</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/Audi.jpg" height="14" width="40" />
+															</div>
+															<div class="carname">
+																<a href="#Audi" data-toggle="tab" >奥迪</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/BT.jpg" height="30" width="30" />
+															</div>
+															<div class="carname">
+																<a href="#BT" data-toggle="tab" >本田</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/ford.jpg" height="25" width="39" />
+															</div>
+															<div class="carname">
+																<a href="#ford" data-toggle="tab" >福特</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/FT.jpg" height="30" width="30" />
+															</div>
+															<div class="carname">
+																<a href="#FT" data-toggle="tab" >丰田</a>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="tab-pane fade" id="A">
+												<ul class="list-inline list-unstyled">
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/Audi.jpg" height="14" width="40" />
+															</div>
+															<div class="carname">
+																<a href="#Audi" data-toggle="tab" >奥迪</a>
+															</div>
+														</div>
+													</li>
+												</ul>
+												
+											</div>
+											<!--<div class="tab-pane fade" id="B">
+												<ul class="list-inline list-unstyled">
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/BC.jpg" height="30" width="30" />
+															</div>
+															<div class="carname">
+																<a href="#BC" data-toggle="tab" >奔驰</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/BMW.jpg" height="30" width="30" />
+															</div>
+															<div class="carname">
+																<a href="#BMW" data-toggle="tab" >宝马</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/BT.jpg" height="30" width="30" />
+															</div>
+															<div class="carname">
+																<a href="#BT" data-toggle="tab" >本田</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/porsche.jpg" height="36" width="28" />
+															</div>
+															<div class="carname">
+																<a href="#BSJ" data-toggle="tab" >保时捷</a>
+															</div>
+														</div>
+													</li>
+												</ul>
+												
+											</div>
+											<div class="tab-pane fade" id="C">
+												
+											</div>
+											<div class="tab-pane fade" id="D">
+												<ul class="list-inline list-unstyled">
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/DZ.jpg" height="30" width="30" />
+															</div>
+															<div class="carname">
+																<a href="#DZ" data-toggle="tab" >大众</a>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="tab-pane fade" id="F">
+												<ul class="list-inline list-unstyled">
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/ford.jpg" height="25" width="39" />
+															</div>
+															<div class="carname">
+																<a href="#ford" data-toggle="tab" >福特</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/FT.jpg" height="30" width="30" />
+															</div>
+															<div class="carname">
+																<a href="#FT" data-toggle="tab" >丰田</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/falali.jpg" height="30" width="39" />
+															</div>
+															<div class="carname">
+																<a href="#falali" data-toggle="tab" >法拉利</a>
+															</div>
+														</div>
+													</li>
+													
+												</ul>
+											</div>
+											<div class="tab-pane fade" id="G">
+												
+											</div>
+											<div class="tab-pane fade" id="H">
+												
+											</div>
+											<div class="tab-pane fade" id="J">
+												
+											</div>
+											<div class="tab-pane fade" id="K">
+												
+											</div>
+											<div class="tab-pane fade" id="L">
+												<ul class="list-inline list-unstyled">
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/lamborghini.jpg" height="37" width="34" />
+															</div>
+															<div class="carname">
+																<a href="#LBJN" data-toggle="tab" >兰博基尼</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/landrover.jpg" height="20" width="35" />
+															</div>
+															<div class="carname">
+																<a href="#LH" data-toggle="tab" >路虎</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/LKSS.jpg" height="35" width="35" />
+															</div>
+															<div class="carname">
+																<a href="#LKSS" data-toggle="tab" >雷克萨斯</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/LM.jpg" height="32" width="32" />
+															</div>
+															<div class="carname">
+																<a href="#LM" data-toggle="tab" >铃木</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/rollsroyce.jpg" height="32" width="26" />
+															</div>
+															<div class="carname">
+																<a href="#LSLS" data-toggle="tab" >劳斯莱斯</a>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="tab-pane fade" id="M">
+												<ul class="list-inline list-unstyled">
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/MZD.jpg" height="32" width="32" />
+															</div>
+															<div class="carname">
+																<a href="#MZD" data-toggle="tab" >马自达</a>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="tab-pane fade" id="N">
+												<ul class="list-inline list-unstyled">
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/NISSAN.jpg" height="30" width="32" />
+															</div>
+															<div class="carname">
+																<a href="#NISSAN" data-toggle="tab" >NISSAN</a>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="tab-pane fade" id="O">
+												<ul class="list-inline list-unstyled">
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/OG.jpg" height="30" width="32" />
+															</div>
+															<div class="carname">
+																<a href="#OG" data-toggle="tab" >讴歌</a>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="tab-pane fade" id="P">
+												
+											</div>
+											<div class="tab-pane fade" id="Q">
+												
+											</div>
+											<div class="tab-pane fade" id="R">
+												<ul class="list-inline list-unstyled">
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/RY.png" height="32" width="32" />
+															</div>
+															<div class="carname">
+																<a href="#RY" data-toggle="tab" >日野</a>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="tab-pane fade" id="S">
+												<ul class="list-inline list-unstyled">
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/SBL.jpg" height="24" width="39" />
+															</div>
+															<div class="carname">
+																<a href="#SBL" data-toggle="tab" >斯巴鲁</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/SL.jpg" height="32" width="32" />
+															</div>
+															<div class="carname">
+																<a href="#SL" data-toggle="tab" >三菱</a>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="tab-pane fade" id="T">
+												
+											</div>
+											<div class="tab-pane fade" id="W">
+												
+											</div>
+											<div class="tab-pane fade" id="X">
+												
+											</div>
+											<div class="tab-pane fade" id="Y">
+												<ul class="list-inline list-unstyled">
+													<li>
+														<div class="cardivL">
+															<div class="carimg">
+																<img src="caricons/YFND.jpg" height="32" width="32" />
+															</div>
+															<div class="carname">
+																<a href="#YFDN" data-toggle="tab" >英菲迪尼</a>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="tab-pane fade" id="Z">
+												
+											</div>
+										-->
+										</div> 
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="tab-pane fade cartype" id="BC">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >E 200K</div></li>
+									<li><div class="cardivNmsg" >E 260 L CGI</div></li>
+									<li><div class="cardivNmsg" >E 300L</div></li>
+									<li><div class="cardivNmsg" >E 350</div></li>
+									<li><div class="cardivNmsg" >C 180 K</div></li>
+									<li><div class="cardivNmsg" >C 230</div></li>
+									<li><div class="cardivNmsg" >C 300</div></li>
+								</ul>
+							</div>
+							<!--<div class="tab-pane fade cartype" id="Audi">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >A6</div></li>
+									<li><div class="cardivNmsg" >A6L</div></li>
+									<li><div class="cardivNmsg" >A4</div></li>
+									<li><div class="cardivNmsg" >A4L</div></li>
+									<li><div class="cardivNmsg" >Q5</div></li>
+									<li><div class="cardivNmsg" >A6</div></li>
+								</ul>
+							</div>
+							<div class="tab-pane fade cartype" id="BMW">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >318i</div></li>
+									<li><div class="cardivNmsg" >320i</div></li>
+									<li><div class="cardivNmsg" >328i</div></li>
+									<li><div class="cardivNmsg" >520i</div></li>
+									<li><div class="cardivNmsg" >525i</div></li>
+								</ul>
+							</div>
+							<div class="tab-pane fade cartype" id="BT">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >CR-V</div></li>
+									<li><div class="cardivNmsg" >思域</div></li>
+									<li><div class="cardivNmsg" >艾力绅</div></li>
+									<li><div class="cardivNmsg" >杰德</div></li>
+									<li><div class="cardivNmsg" >飞度</div></li>
+								</ul>
+							</div>
+							<div class="tab-pane fade cartype" id="BSJ">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >卡曼</div></li>
+									<li><div class="cardivNmsg" >博客斯特</div></li>
+									<li><div class="cardivNmsg" >911卡雷拉</div></li>
+								</ul>
+							</div>
+							<div class="tab-pane fade cartype" id="BSJ">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >卡曼</div></li>
+									<li><div class="cardivNmsg" >博客斯特</div></li>
+									<li><div class="cardivNmsg" >911卡雷拉</div></li>
+								</ul>
+							</div>
+							<div class="tab-pane fade cartype" id="DZ">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >捷达</div></li>
+									<li><div class="cardivNmsg" >捷达王</div></li>
+									<li><div class="cardivNmsg" >宝来</div></li>
+								</ul>
+							</div>
+							<div class="tab-pane fade cartype" id="ford">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >嘉年华-两厢</div></li>
+									<li><div class="cardivNmsg" >嘉年华-三厢</div></li>
+									<li><div class="cardivNmsg" >致胜</div></li>
+								</ul>
+							</div>
+							<div class="tab-pane fade cartype" id="FT">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >威驰</div></li>
+									<li><div class="cardivNmsg" >普拉多</div></li>
+									<li><div class="cardivNmsg" >锐志</div></li>
+								</ul>
+							</div>
+							<div class="tab-pane fade cartype" id="falali">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >458</div></li>
+									<li><div class="cardivNmsg" >488</div></li>
+									<li><div class="cardivNmsg" >f12</div></li>
+								</ul>
+							</div>
+							<div class="tab-pane fade cartype" id="LBJN">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >Aventador</div></li>
+									<li><div class="cardivNmsg" >Huracan</div></li>
+									<li><div class="cardivNmsg" >Gallardo</div></li>
+								</ul>
+							</div>
+							<div class="tab-pane fade cartype" id="LH">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >揽胜</div></li>
+									<li><div class="cardivNmsg" >揽胜运动版</div></li>
+									<li><div class="cardivNmsg" >发现</div></li>
+									<li><div class="cardivNmsg" >神行者</div></li>
+								</ul>
+							</div>
+							<div class="tab-pane fade cartype" id="LKSS">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >CT200h</div></li>
+									<li><div class="cardivNmsg" >ES240</div></li>
+									<li><div class="cardivNmsg" >GS250</div></li>
+									<li><div class="cardivNmsg" >IS250</div></li>
+								</ul>
+							</div>
+							<div class="tab-pane fade cartype" id="LM">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >浪迪</div></li>
+									<li><div class="cardivNmsg" >吉姆尼</div></li>
+									<li><div class="cardivNmsg" >超级维特拉</div></li>
+									<li><div class="cardivNmsg" >利亚纳</div></li>
+								</ul>
+							</div>
+							<div class="tab-pane fade cartype" id="LSLS">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >100EX</div></li>
+									<li><div class="cardivNmsg" >Ghost</div></li>
+									<li><div class="cardivNmsg" >200EX古斯特</div></li>
+									<li><div class="cardivNmsg" >10HP</div></li>
+								</ul>
+							</div>
+							<div class="tab-pane fade cartype" id="MZD">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >马自达3</div></li>
+									<li><div class="cardivNmsg" >马自达6</div></li>
+									<li><div class="cardivNmsg" >CX-9</div></li>
+									<li><div class="cardivNmsg" >马自达8</div></li>
+								</ul>
+							</div>
+							<div class="tab-pane fade cartype" id="NISSAN">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >马驰</div></li>
+									<li><div class="cardivNmsg" >阳光</div></li>
+									<li><div class="cardivNmsg" >骐达</div></li>
+									<li><div class="cardivNmsg" >轩逸</div></li>
+								</ul>
+							</div>
+							<div class="tab-pane fade cartype" id="OG">
+								<ul class="list-inline list-unstyled">
+									<li><div class="cardivNmsg" >马驰</div></li>
+									<li><div class="cardivNmsg" >阳光</div></li>
+									<li><div class="cardivNmsg" >骐达</div></li>
+									<li><div class="cardivNmsg" >轩逸</div></li>
+								</ul>
+							</div>
+					-->
+					
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+			
+			
+		
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="row">
+						<div class="col-md-12">
+							<span>手机号</span>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="text" class="form-control" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="row">
+						<div class="col-md-12">
+							<span>油箱</span>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<select class="form-control">
+									<option value="">--请选择--</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="row">
+						<div class="col-md-12">
+							<span>VIN底盘号</span>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="text" class="form-control" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="row">
+						<div class="col-md-12">
+							<span>保养手册</span>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<select class="form-control">
+									<option value="">--请选择--</option>
+								</select>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>		
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="row">
+						<div class="col-md-12">
+							<span>车里程</span>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="text" class="form-control" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="row">
+						
+					</div>
+				</div>-->
+			</div>	
+			<h4>故障描述：</h4>
+			<div class="row">
+				<div class="col-md-12">
+					<textarea class="form-control" rows="4"></textarea>
+				</div>
+			</div>	
+
+			<!--<div class="row" style="margin-top: 10px;">
+				<div class="col-md-12">
+					<div style="width: 100%;height: auto;border: 1px solid #000000;padding: 10px;">
+						本人同意齐度车坊依据本维修工单所列之修理项目进行诊断和/或维修。愿意在提车前支付相关的零件、
+						工时、油料、税务等费用。本人亦认知该车辆在齐度车坊场所内将得到妥善保管，如因齐度车坊无法控制
+						之原因而造成意外损失，齐度车坊不需负责。车内无现金、或贵重物品。其他车内物品已妥善处理，如有丢失
+						，齐度车坊不负责。齐度车坊不需保存废旧零件。
+					</div>
+				</div>
+			</div>
+			<div class="row" style="margin-top: 30px;">
+				<div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">客户签字</div>
+				<div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">_______________</div>
+				<div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">维修顾问签字</div>
+				<div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">_______________</div>
+				<div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">日期</div>
+				<div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">_______________</div>
+			</div>-->
+			<div class="row" style="text-align: center;margin-top: 30px;">
+				<button type="button" class="btn btn-primary">生成维修单</button>
+				<button type="button" class="btn btn-warning">暂存</button>	
+			</div>
+		</div>
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
